@@ -1,0 +1,1724 @@
+/**
+ * Cyberpunk Yellow-Black Theme for CodeNepal
+ */
+
+/* Import Cyberpunk Font */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+/* Root Variables */
+:root {
+    --bg-main: #0A0A0A;
+    --bg-surface: #1A1A1A;
+    --primary-yellow: #FFD300;
+    --neon-magenta: #FF007F;
+    --electric-cyan: #00FFFF;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --text-muted: #777777;
+    --border-color: #333333;
+    --hover-bg: #332B00;
+    --neon-red: #FF2E2E;
+    --lime-neon: #B6FF00;
+    --shadow-black: rgba(0, 0, 0, 0.6);
+    --glass-dark: rgba(20, 20, 20, 0.7);
+}
+
+/* Global Styles */
+body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+}
+
+/* Code Editor Styles */
+.CodeMirror {
+    height: 300px;
+    border: 1px solid var(--primary-yellow);
+    border-radius: 0.5rem;
+    font-size: 14px;
+    background: var(--bg-surface);
+    box-shadow: 0 0 10px rgba(255, 211, 0, 0.2);
+}
+
+.CodeMirror-scroll {
+    min-height: 300px;
+}
+
+/* Lesson Content Styles - PROTECTED FROM THEME OVERRIDES */
+.lesson-content h1 {
+    font-size: 1.875rem !important;
+    font-weight: 700 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    color: var(--primary-yellow) !important;
+    text-shadow: 0 0 10px rgba(255, 211, 0, 0.3) !important;
+}
+
+.lesson-content h2 {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.75rem !important;
+    color: var(--primary-yellow) !important;
+}
+
+.lesson-content h3 {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    color: var(--primary-yellow) !important;
+}
+
+.lesson-content p {
+    margin-bottom: 1rem !important;
+    line-height: 1.75 !important;
+    color: var(--text-secondary) !important;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+    margin-bottom: 1rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.lesson-content li {
+    margin-bottom: 0.5rem !important;
+    color: var(--text-secondary) !important;
+}
+
+.lesson-content code {
+    background-color: var(--bg-surface) !important;
+    padding: 0.125rem 0.375rem !important;
+    border-radius: 0.25rem !important;
+    font-size: 0.875rem !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    color: var(--lime-neon) !important;
+}
+
+.lesson-content pre {
+    background-color: var(--bg-surface) !important;
+    color: var(--lime-neon) !important;
+    padding: 1rem !important;
+    border-radius: 0.5rem !important;
+    overflow-x: auto !important;
+    margin-bottom: 1rem !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.lesson-content pre code {
+    background-color: transparent !important;
+    padding: 0 !important;
+    color: inherit !important;
+}
+
+.lesson-content strong {
+    font-weight: 600 !important;
+    color: var(--primary-yellow) !important;
+}
+
+.lesson-content em {
+    font-style: italic !important;
+    color: var(--electric-cyan) !important;
+}
+
+/* Protect lesson content from hover effects */
+.lesson-content:hover,
+.lesson-content:hover *,
+.lesson-content *:hover {
+    color: inherit !important;
+    background-color: inherit !important;
+}
+
+/* Smooth Transitions */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Loading Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Focus Styles for Accessibility */
+*:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Utility Classes */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Lesson Content HTML Rendering */
+.lesson-content img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 0.5rem !important;
+    margin: 1rem 0 !important;
+}
+
+.lesson-content blockquote {
+    border-left: 4px solid var(--primary-yellow) !important;
+    padding-left: 1rem !important;
+    margin: 1rem 0 !important;
+    font-style: italic !important;
+    color: var(--text-secondary) !important;
+}
+
+.lesson-content table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 1rem 0 !important;
+    background: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.lesson-content table th,
+.lesson-content table td {
+    border: 1px solid var(--border-color) !important;
+    padding: 0.75rem !important;
+    text-align: left !important;
+    color: var(--text-primary) !important;
+}
+
+.lesson-content table th {
+    background-color: var(--bg-main) !important;
+    font-weight: 600 !important;
+    color: var(--primary-yellow) !important;
+    border-bottom: 2px solid var(--primary-yellow) !important;
+}
+
+.lesson-content table td {
+    background-color: var(--bg-surface) !important;
+}
+
+.lesson-content table tr:hover td {
+    background-color: rgba(255, 211, 0, 0.05) !important;
+}
+
+.lesson-content a {
+    color: var(--primary-yellow) !important;
+    text-decoration: underline !important;
+}
+
+.lesson-content a:hover {
+    color: var(--electric-cyan) !important;
+}
+
+.lesson-content hr {
+    border: 0 !important;
+    border-top: 1px solid var(--border-color) !important;
+    margin: 1.5rem 0 !important;
+}
+
+.lesson-content video {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 0.5rem !important;
+    margin: 1rem 0 !important;
+}
+
+.lesson-content iframe {
+    max-width: 100% !important;
+    border-radius: 0.5rem !important;
+    margin: 1rem 0 !important;
+}
+
+/* Success Popup Overlay */
+#success-popup {
+    backdrop-filter: blur(4px);
+}
+
+/* Confetti Animation for Success */
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #f0f;
+    animation: confetti-fall 3s linear infinite;
+}
+
+/* ====
+====================================
+   CYBERPUNK YELLOW-BLACK THEME OVERRIDES
+   ======================================== */
+
+/* Cyberpunk Buttons */
+.btn-primary,
+button[type="submit"] {
+    background: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    border: none !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover {
+    background: #FFEA00 !important;
+    color: #0A0A0A !important;
+    transform: translateY(-2px);
+}
+
+/* Secondary Buttons */
+.bg-gray-200,
+.bg-gray-300 {
+    background: transparent !important;
+    border: 1px solid var(--primary-yellow) !important;
+    color: var(--primary-yellow) !important;
+}
+
+.bg-gray-200:hover,
+.bg-gray-300:hover {
+    background: rgba(255, 211, 0, 0.1) !important;
+    box-shadow: 0 0 15px rgba(255, 211, 0, 0.3);
+}
+
+/* Cards & Surfaces */
+.bg-white {
+    background: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.shadow,
+.shadow-md,
+.shadow-lg,
+.shadow-xl,
+.shadow-2xl {
+    box-shadow: 0 0 20px var(--shadow-black), 0 0 40px rgba(255, 211, 0, 0.1) !important;
+}
+
+/* Card Hover Effects */
+.hover\:shadow-lg:hover,
+.hover\:shadow-md:hover {
+    box-shadow: 0 0 25px rgba(255, 211, 0, 0.3), 0 0 50px rgba(255, 211, 0, 0.1) !important;
+    border-color: var(--primary-yellow) !important;
+    transform: translateY(-4px);
+    transition: all 0.2s ease;
+}
+
+/* Text Colors */
+.text-gray-900,
+.text-gray-800,
+.text-gray-700 {
+    color: var(--text-primary) !important;
+}
+
+.text-gray-600,
+.text-gray-500 {
+    color: var(--text-secondary) !important;
+}
+
+.text-gray-400 {
+    color: var(--text-muted) !important;
+}
+
+.text-blue-600,
+.text-blue-700,
+.text-blue-800 {
+    color: var(--primary-yellow) !important;
+}
+
+.text-green-600,
+.text-green-700,
+.text-green-800 {
+    color: var(--lime-neon) !important;
+}
+
+.text-red-600,
+.text-red-700,
+.text-red-800 {
+    color: var(--neon-red) !important;
+}
+
+.text-purple-600,
+.text-purple-700 {
+    color: var(--neon-magenta) !important;
+}
+
+/* Backgrounds */
+.bg-gray-50,
+.bg-gray-100 {
+    background: var(--bg-main) !important;
+}
+
+.bg-blue-50,
+.bg-blue-100 {
+    background: rgba(255, 211, 0, 0.1) !important;
+    border-color: var(--primary-yellow) !important;
+}
+
+.bg-green-50,
+.bg-green-100 {
+    background: rgba(182, 255, 0, 0.1) !important;
+    border-color: var(--lime-neon) !important;
+}
+
+.bg-red-50,
+.bg-red-100 {
+    background: rgba(255, 46, 46, 0.1) !important;
+    border-color: var(--neon-red) !important;
+}
+
+.bg-purple-50,
+.bg-purple-100 {
+    background: rgba(255, 0, 127, 0.1) !important;
+    border-color: var(--neon-magenta) !important;
+}
+
+/* Borders */
+.border-gray-200,
+.border-gray-300 {
+    border-color: var(--border-color) !important;
+}
+
+.border-blue-200,
+.border-blue-300,
+.border-blue-500 {
+    border-color: var(--primary-yellow) !important;
+}
+
+.border-green-200,
+.border-green-500 {
+    border-color: var(--lime-neon) !important;
+}
+
+.border-red-200,
+.border-red-500 {
+    border-color: var(--neon-red) !important;
+}
+
+/* Input Fields */
+input,
+textarea,
+select {
+    background: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-yellow) !important;
+    box-shadow: 0 0 15px rgba(255, 211, 0, 0.3) !important;
+    outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-muted) !important;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-surface) !important;
+    border-bottom: 2px solid var(--primary-yellow) !important;
+    box-shadow: 0 0 20px rgba(255, 211, 0, 0.2) !important;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-yellow) !important;
+    text-shadow: 0 0 10px rgba(255, 211, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background: var(--bg-surface) !important;
+    border-top: 2px solid var(--primary-yellow) !important;
+}
+
+/* Progress Bars */
+.bg-blue-600 {
+    background: linear-gradient(90deg, var(--primary-yellow), var(--electric-cyan)) !important;
+}
+
+/* Badges */
+.rounded {
+    border-radius: 0.25rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Glow Effects */
+.glow-yellow {
+    box-shadow: 0 0 10px rgba(255, 211, 0, 0.5), 0 0 20px rgba(255, 211, 0, 0.3);
+}
+
+.glow-cyan {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.glow-magenta {
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5), 0 0 20px rgba(255, 0, 127, 0.3);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    color: var(--primary-yellow);
+    text-shadow: 0 0 10px rgba(255, 211, 0, 0.3);
+}
+
+/* Links */
+a {
+    color: var(--primary-yellow);
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--electric-cyan);
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+/* Tables */
+table {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+}
+
+thead {
+    background: var(--bg-main) !important;
+    border-bottom: 2px solid var(--primary-yellow);
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:hover {
+    background: rgba(255, 211, 0, 0.05);
+}
+
+/* Animations */
+@keyframes cyber-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(255, 211, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 211, 0, 0.6), 0 0 40px rgba(255, 211, 0, 0.3);
+    }
+}
+
+.cyber-pulse {
+    animation: cyber-pulse 2s ease-in-out infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-yellow);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--electric-cyan);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Glass Effect */
+.glass-panel {
+    background: var(--glass-dark);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px var(--shadow-black);
+}
+
+/* Neon Text */
+.neon-text {
+    color: var(--primary-yellow);
+    text-shadow:
+        0 0 5px rgba(255, 211, 0, 0.5),
+        0 0 10px rgba(255, 211, 0, 0.5),
+        0 0 20px rgba(255, 211, 0, 0.5),
+        0 0 40px rgba(255, 211, 0, 0.3);
+}
+
+/* Code Blocks */
+pre,
+code {
+    font-family: 'Share Tech Mono', monospace !important;
+}
+
+/* Success/Error States */
+.bg-green-600 {
+    background: var(--lime-neon) !important;
+    color: var(--bg-main) !important;
+}
+
+.bg-red-600 {
+    background: var(--neon-red) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Disabled States */
+button:disabled,
+input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+/* Loading Spinner */
+.animate-spin {
+    animation: spin 1s linear infinite;
+    color: var(--primary-yellow);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ========================================
+   REMOVE ALL BLUE - FORCE CYBERPUNK THEME
+   ======================================== */
+
+/* Remove ALL blue gradients and backgrounds */
+.bg-gradient-to-r,
+.bg-gradient-to-br,
+.bg-gradient-to-bl,
+.bg-gradient-to-tr,
+.bg-gradient-to-tl {
+    background: var(--bg-main) !important;
+}
+
+/* Force remove blue from hero sections */
+.from-blue-600,
+.from-blue-500,
+.from-blue-50,
+.to-blue-800,
+.to-blue-600,
+.to-purple-50,
+.to-purple-600 {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%) !important;
+}
+
+/* Hero section specific */
+[class*="bg-gradient"] {
+    background: var(--bg-main) !important;
+}
+
+/* Remove blue from specific utility classes */
+.bg-blue-50 {
+    background: var(--bg-main) !important;
+}
+
+.bg-blue-100 {
+    background: rgba(255, 211, 0, 0.05) !important;
+}
+
+.bg-blue-500 {
+    background: var(--primary-yellow) !important;
+}
+
+.bg-blue-600 {
+    background: var(--primary-yellow) !important;
+}
+
+.bg-blue-700 {
+    background: #E6C200 !important;
+}
+
+.bg-blue-800 {
+    background: var(--bg-surface) !important;
+}
+
+/* Text colors - remove blue */
+.text-blue-50 {
+    color: var(--text-secondary) !important;
+}
+
+.text-blue-100 {
+    color: var(--text-secondary) !important;
+}
+
+.text-blue-600 {
+    color: var(--primary-yellow) !important;
+}
+
+.text-blue-700 {
+    color: var(--primary-yellow) !important;
+}
+
+.text-blue-800 {
+    color: var(--primary-yellow) !important;
+}
+
+/* Border colors - remove blue */
+.border-blue-200 {
+    border-color: var(--border-color) !important;
+}
+
+.border-blue-300 {
+    border-color: var(--primary-yellow) !important;
+}
+
+.border-blue-500 {
+    border-color: var(--primary-yellow) !important;
+}
+
+.border-blue-600 {
+    border-color: var(--primary-yellow) !important;
+}
+
+/* Hover states - remove blue */
+.hover\:bg-blue-700:hover {
+    background: #FFEA00 !important;
+}
+
+.hover\:bg-blue-600:hover {
+    background: #FFEA00 !important;
+}
+
+.hover\:text-blue-600:hover {
+    color: var(--primary-yellow) !important;
+}
+
+.hover\:text-blue-800:hover {
+    color: var(--electric-cyan) !important;
+}
+
+/* Focus states - remove blue ring */
+.focus\:ring-blue-500:focus {
+    --tw-ring-color: var(--primary-yellow) !important;
+    box-shadow: 0 0 0 3px rgba(255, 211, 0, 0.3) !important;
+}
+
+.focus\:border-blue-500:focus {
+    border-color: var(--primary-yellow) !important;
+}
+
+/* Purple overrides */
+.from-purple-600,
+.to-purple-600,
+.bg-purple-600 {
+    background: var(--neon-magenta) !important;
+}
+
+/* Specific hero section fix */
+body>div:first-of-type {
+    background: var(--bg-main) !important;
+}
+
+/* Main content area */
+main,
+.main-content {
+    background: var(--bg-main) !important;
+}
+
+/* Feature boxes and cards */
+.feature-box,
+.card,
+[class*="rounded-lg"],
+[class*="rounded-xl"] {
+    background: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Yellow text for headings */
+h1,
+h2,
+h3 {
+    color: var(--primary-yellow) !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 10px rgba(255, 211, 0, 0.3) !important;
+}
+
+/* Ensure body is dark */
+html,
+body {
+    background: var(--bg-main) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Override Tailwind's default colors completely */
+* {
+    border-color: var(--border-color);
+}
+
+/* Button glow animation - REMOVED for cleaner look */
+
+/* Heading pulse - REMOVED for cleaner look */
+
+
+/* ========================================
+   FIX CONTRAST & COLOR ISSUES
+   ======================================== */
+
+/* Fix gray backgrounds with proper text color */
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-200 {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+.bg-gray-300,
+.bg-gray-400 {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Fix white backgrounds */
+.bg-white {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Ensure all text on dark backgrounds is light */
+[class*="bg-gray"],
+[class*="bg-black"],
+.bg-white {
+    color: var(--text-primary) !important;
+}
+
+/* Fix magenta/pink - make it darker and more subtle */
+.bg-magenta,
+.bg-pink-500,
+.bg-pink-600,
+[style*="background: #FF007F"],
+[style*="background:#FF007F"] {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2A1A2A 100%) !important;
+    border: 1px solid var(--neon-magenta) !important;
+}
+
+/* Fix bright magenta text */
+.text-magenta-400,
+[style*="color: #FF007F"],
+[style*="color:#FF007F"] {
+    color: var(--electric-cyan) !important;
+}
+
+/* Fix course card thumbnails - remove pink gradient */
+.from-blue-500,
+.to-purple-600,
+[class*="from-blue"][class*="to-purple"] {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%) !important;
+}
+
+/* Fix CTA section - remove pink/purple gradient */
+.from-blue-600.to-purple-600,
+[class*="from-blue-6"][class*="to-purple"] {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%) !important;
+    border: 2px solid var(--primary-yellow) !important;
+}
+
+/* Course cards - ensure proper contrast */
+.course-card,
+[class*="rounded-lg"] {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.course-card:hover {
+    border-color: var(--primary-yellow) !important;
+    box-shadow: 0 0 20px rgba(255, 211, 0, 0.3) !important;
+}
+
+/* Fix select/dropdown backgrounds */
+select,
+option {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Fix modal/popup backgrounds */
+.modal,
+.popup,
+[role="dialog"] {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Fix all paragraph text */
+p {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-yellow) !important;
+}
+
+/* Fix links */
+a {
+    color: var(--primary-yellow) !important;
+}
+
+a:hover {
+    color: var(--electric-cyan) !important;
+}
+
+/* Fix labels */
+label {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix span text */
+span {
+    color: inherit;
+}
+
+/* Specific fix for course description text */
+.course-description,
+[class*="description"] {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix badge text */
+.badge,
+[class*="badge"] {
+    color: var(--bg-main) !important;
+    background: var(--primary-yellow) !important;
+}
+
+/* Fix alert/notification backgrounds */
+.alert,
+.notification {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Fix success alerts */
+.alert-success,
+.bg-green-50,
+.bg-green-100 {
+    background: rgba(182, 255, 0, 0.1) !important;
+    color: var(--lime-neon) !important;
+    border-color: var(--lime-neon) !important;
+}
+
+/* Fix error alerts */
+.alert-error,
+.bg-red-50,
+.bg-red-100 {
+    background: rgba(255, 46, 46, 0.1) !important;
+    color: var(--neon-red) !important;
+    border-color: var(--neon-red) !important;
+}
+
+/* Fix info alerts */
+.alert-info,
+.bg-blue-50,
+.bg-blue-100 {
+    background: rgba(255, 211, 0, 0.1) !important;
+    color: var(--primary-yellow) !important;
+    border-color: var(--primary-yellow) !important;
+}
+
+/* Fix warning alerts */
+.alert-warning,
+.bg-yellow-50,
+.bg-yellow-100 {
+    background: rgba(255, 211, 0, 0.1) !important;
+    color: var(--primary-yellow) !important;
+    border-color: var(--primary-yellow) !important;
+}
+
+/* Ensure proper contrast for all text elements */
+div,
+section,
+article,
+aside,
+main {
+    color: var(--text-primary);
+}
+
+/* Fix placeholder text */
+::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 1;
+}
+
+/* Fix disabled elements */
+:disabled {
+    color: var(--text-muted) !important;
+    opacity: 0.5;
+}
+
+/* Fix code blocks */
+code,
+pre {
+    background: var(--bg-surface) !important;
+    color: var(--lime-neon) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Fix tables */
+table {
+    color: var(--text-primary) !important;
+}
+
+th {
+    color: var(--primary-yellow) !important;
+}
+
+td {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix list items */
+li {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix strong/bold text */
+strong,
+b {
+    color: var(--primary-yellow) !important;
+}
+
+/* Fix emphasized text */
+em,
+i {
+    color: var(--electric-cyan) !important;
+}
+
+/* Fix small text */
+small {
+    color: var(--text-muted) !important;
+}
+
+/* Remove any remaining bright pink/magenta */
+[class*="pink"],
+[class*="magenta"] {
+    background: var(--bg-surface) !important;
+    color: var(--electric-cyan) !important;
+    border-color: var(--electric-cyan) !important;
+}
+
+/* Fix CTA sections */
+.cta,
+[class*="cta"] {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%) !important;
+    border: 2px solid var(--primary-yellow) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Ensure buttons always have good contrast */
+button,
+.button,
+[type="button"],
+[type="submit"] {
+    color: var(--bg-main) !important;
+    border: none !important;
+}
+
+button:hover,
+.button:hover {
+    background: #FFEA00 !important;
+    color: var(--bg-main) !important;
+}
+
+/* Secondary buttons */
+.btn-secondary,
+.button-secondary {
+    background: transparent !important;
+    color: var(--primary-yellow) !important;
+    border: 2px solid var(--primary-yellow) !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 211, 0, 0.1) !important;
+    color: var(--primary-yellow) !important;
+}
+
+
+/* ========================================
+   CRITICAL CONTRAST FIXES - HIGHEST PRIORITY
+   ======================================== */
+
+/* Force all gray backgrounds to be dark with light text */
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-200,
+.bg-gray-300,
+.bg-gray-400,
+.bg-gray-500 {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Force all children of gray backgrounds to have light text */
+.bg-gray-50 *,
+.bg-gray-100 *,
+.bg-gray-200 *,
+.bg-gray-300 * {
+    color: var(--text-primary) !important;
+}
+
+/* Fix lesson list items */
+.lesson-item,
+[class*="lesson"] {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Fix any remaining gray text on dark backgrounds */
+.text-gray-700,
+.text-gray-800,
+.text-gray-900 {
+    color: var(--text-primary) !important;
+}
+
+/* Fix hover states on gray backgrounds */
+.hover\:bg-gray-50:hover,
+.hover\:bg-gray-100:hover {
+    background: rgba(255, 211, 0, 0.1) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Fix all divs with gray backgrounds */
+div[class*="bg-gray"] {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+div[class*="bg-gray"] * {
+    color: var(--text-primary) !important;
+}
+
+/* Fix specific lesson/course elements */
+.lesson-title,
+.course-title {
+    color: var(--primary-yellow) !important;
+}
+
+.lesson-description,
+.course-description {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix locked/unlocked indicators */
+.locked,
+.unlocked,
+[class*="lock"] {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Fix status badges */
+.status,
+.badge,
+[class*="status"] {
+    background: var(--primary-yellow) !important;
+    color: var(--bg-main) !important;
+    font-weight: 600;
+}
+
+/* Fix completed status */
+.completed,
+[class*="completed"] {
+    color: var(--lime-neon) !important;
+}
+
+/* Fix locked status */
+.locked-text {
+    color: var(--text-muted) !important;
+}
+
+/* Ensure all text elements have proper color */
+p,
+span,
+div,
+a,
+label,
+input,
+textarea,
+select {
+    color: inherit;
+}
+
+/* Override any inline styles that might cause issues */
+[style*="color: #"] {
+    color: var(--text-primary) !important;
+}
+
+/* Fix course content area */
+.course-content,
+.lesson-content {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Fix navigation items */
+nav a,
+nav span,
+nav div {
+    color: var(--text-secondary) !important;
+}
+
+nav a:hover {
+    color: var(--primary-yellow) !important;
+}
+
+/* Fix dropdown menus */
+.dropdown,
+[class*="dropdown"] {
+    background: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Fix all list items */
+ul li,
+ol li {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix breadcrumbs */
+.breadcrumb,
+nav ol,
+nav ul {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix form labels */
+form label {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+}
+
+/* Fix required indicators */
+.required,
+[required]+label::after {
+    color: var(--neon-red) !important;
+}
+
+/* Fix help text */
+.help-text,
+.hint,
+[class*="help"] {
+    color: var(--text-muted) !important;
+}
+
+/* Fix icon colors */
+svg {
+    color: inherit;
+}
+
+/* Fix specific Tailwind utility classes */
+.text-sm,
+.text-xs,
+.text-lg,
+.text-xl {
+    color: inherit !important;
+}
+
+/* Ensure visibility on all backgrounds */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ========================================
+   ULTRA SPECIFIC BUTTON FIXES
+   ======================================== */
+
+/* ONLY "View All Courses" button - White background with black text */
+.view-all-courses-btn {
+    background: #FFFFFF !important;
+    color: #0A0A0A !important;
+    border: 2px solid #FFFFFF !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+/* On hover: YELLOW background with BLACK text */
+.view-all-courses-btn:hover {
+    background: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    box-shadow: 0 0 20px rgba(255, 211, 0, 0.6), 0 0 40px rgba(255, 211, 0, 0.3) !important;
+    border-color: var(--primary-yellow) !important;
+}
+
+/* Force ALL OTHER buttons to have proper contrast with yellow */
+a.bg-blue-600:not(.view-all-courses-btn),
+a.bg-blue-700:not(.view-all-courses-btn),
+button.bg-blue-600,
+button.bg-blue-700,
+.bg-blue-600:not(.view-all-courses-btn),
+.bg-blue-700:not(.view-all-courses-btn) {
+    background: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    border: 2px solid var(--primary-yellow) !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+a.bg-blue-600:not(.view-all-courses-btn):hover,
+a.bg-blue-700:not(.view-all-courses-btn):hover,
+button.bg-blue-600:hover,
+button.bg-blue-700:hover,
+.bg-blue-600:not(.view-all-courses-btn):hover,
+.bg-blue-700:not(.view-all-courses-btn):hover {
+    background: #FFEA00 !important;
+    color: #0A0A0A !important;
+}
+
+/* Force text-white to be black on yellow buttons */
+.bg-blue-600.text-white:not(.view-all-courses-btn),
+.bg-blue-700.text-white:not(.view-all-courses-btn),
+button.text-white {
+    color: #0A0A0A !important;
+}
+
+/* Fix transparent/secondary buttons */
+.bg-transparent,
+[class*="border-white"],
+.border-2.border-white {
+    background: transparent !important;
+    border: 2px solid var(--primary-yellow) !important;
+    color: var(--primary-yellow) !important;
+}
+
+.bg-transparent:hover {
+    background: rgba(255, 211, 0, 0.1) !important;
+    box-shadow: 0 0 15px rgba(255, 211, 0, 0.4) !important;
+}
+
+/* Ensure button text is always visible */
+button *,
+a.bg-blue-600:not(.view-all-courses-btn) *,
+.bg-blue-600:not(.view-all-courses-btn) * {
+    color: #0A0A0A !important;
+}
+
+/* Fix any remaining visibility issues */
+.invisible-text {
+    color: var(--text-primary) !important;
+}
+
+
+/* ========================================
+   NUCLEAR OPTION - FORCE BUTTON COLORS
+   ======================================== */
+
+/* Target the specific button with maximum specificity */
+a.inline-block.bg-blue-600.text-white,
+a.inline-block.bg-blue-600,
+a[href="/pages/courses"].bg-blue-600,
+a[class*="bg-blue-6"] {
+    background: var(--primary-yellow) !important;
+    background-color: var(--primary-yellow) !important;
+    color: var(--bg-main) !important;
+    border: none !important;
+}
+
+a.inline-block.bg-blue-600:hover,
+a.inline-block.bg-blue-700:hover,
+a[href="/pages/courses"]:hover {
+    background: #FFEA00 !important;
+    background-color: #FFEA00 !important;
+    color: var(--bg-main) !important;
+    box-shadow: 0 0 20px rgba(255, 211, 0, 0.6), 0 0 40px rgba(255, 211, 0, 0.3) !important;
+}
+
+/* Force remove any blue from buttons */
+[class*="bg-blue"] {
+    background: var(--primary-yellow) !important;
+    background-color: var(--primary-yellow) !important;
+}
+
+[class*="bg-blue"][class*="text-white"] {
+    color: var(--bg-main) !important;
+}
+
+/* Hover states */
+[class*="hover:bg-blue"]:hover {
+    background: #FFEA00 !important;
+    background-color: #FFEA00 !important;
+}
+
+
+/* ========================================
+   PREVENT HOVER COLOR CHANGES ON LESSONS
+   ======================================== */
+
+/* Prevent lesson items from turning white on hover */
+.lesson-item,
+.lesson-card,
+[class*="lesson"],
+.bg-gray-50:hover,
+.bg-gray-100:hover,
+.hover\:bg-gray-50:hover {
+    background: var(--bg-surface) !important;
+}
+
+/* Keep text colors stable on hover */
+.lesson-item:hover,
+.lesson-item:hover *,
+.lesson-card:hover,
+.lesson-card:hover * {
+    color: inherit !important;
+}
+
+/* Specific fix for lesson list items */
+a[href*="lesson"]:hover,
+a[href*="lesson"]:hover * {
+    background: var(--bg-surface) !important;
+}
+
+/* Override any white background on hover */
+*:hover.bg-white,
+*:hover [class*="bg-white"] {
+    background: var(--bg-surface) !important;
+}
+
+/* Fix course card hover - keep dark background */
+.bg-white:hover {
+    background: var(--bg-surface) !important;
+}
+
+/* Ensure lesson content area stays dark */
+.lesson-content,
+.lesson-content * {
+    background-color: transparent !important;
+}
+
+.lesson-content table,
+.lesson-content table th,
+.lesson-content table td {
+    background-color: var(--bg-surface) !important;
+}
+
+.lesson-content table th {
+    background-color: var(--bg-main) !important;
+}
+
+
+/* ========================================
+   FIX ALL YELLOW BACKGROUNDS WITH WHITE TEXT
+   ======================================== */
+
+/* Force ALL yellow backgrounds to have BLACK text */
+.bg-yellow-400,
+.bg-yellow-500,
+.bg-yellow-600,
+[class*="bg-yellow"] {
+    background-color: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+}
+
+/* Fix any elements with yellow background */
+[style*="background: #FFD300"],
+[style*="background:#FFD300"],
+[style*="background: #FFEA00"],
+[style*="background:#FFEA00"],
+[style*="background-color: #FFD300"],
+[style*="background-color:#FFD300"],
+[style*="background-color: #FFEA00"],
+[style*="background-color:#FFEA00"] {
+    color: #0A0A0A !important;
+}
+
+/* Fix certificate info boxes and all children */
+.bg-yellow-400,
+.bg-yellow-400 *,
+.bg-yellow-500,
+.bg-yellow-500 *,
+.bg-yellow-600,
+.bg-yellow-600 *,
+[class*="bg-yellow"],
+[class*="bg-yellow"] * {
+    color: #0A0A0A !important;
+}
+
+/* Add rounded corners to ALL buttons */
+
+/* Specific button styling with rounded corners */
+.bg-yellow-400,
+.bg-yellow-500,
+.bg-yellow-600,
+.bg-blue-600,
+.bg-blue-700,
+.bg-green-600,
+.bg-green-700 {
+    border-radius: 0.5rem !important;
+}
+
+/* Fix "Admin User" dropdown button */
+button[class*="bg-yellow"],
+button[class*="yellow"] {
+    background: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    border-radius: 0.375rem !important;
+}
+
+/* Fix AI Hint and Improve Code buttons */
+button[id*="hint"],
+button[id*="improve"],
+button[onclick*="hint"],
+button[onclick*="improve"] {
+    background: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    border-radius: 0.375rem !important;
+}
+
+/* Fix certificate button */
+#get-certificate,
+button[onclick*="certificate"],
+button[onclick*="Certificate"],
+a[href*="certificate"] {
+    background: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    border-radius: 0.5rem !important;
+    cursor: pointer !important;
+}
+
+/* Fix green certificate buttons */
+.bg-green-600,
+.bg-green-700 {
+    background: var(--lime-neon) !important;
+    color: #0A0A0A !important;
+}
+
+.bg-green-600:hover,
+.bg-green-700:hover {
+    background: #C8FF00 !important;
+    color: #0A0A0A !important;
+}
+
+/* Ensure text inside yellow/green buttons is black */
+.bg-yellow-400.text-white,
+.bg-yellow-500.text-white,
+.bg-yellow-600.text-white,
+.bg-green-600.text-white,
+.bg-green-700.text-white {
+    color: #0A0A0A !important;
+}
+
+/* Fix rounded corners on all interactive elements */
+.rounded-lg,
+.rounded-md,
+.rounded {
+    border-radius: 0.5rem !important;
+}
+
+.rounded-2xl {
+    border-radius: 1rem !important;
+}
+
+.rounded-full {
+    border-radius: 9999px !important;
+}
+
+/* ====
+====================================
+   REMOVE BORDERS AND FIX HOVER STATES
+   ======================================== */
+
+/* Remove borders from yellow buttons */
+button[class*="bg-yellow"],
+.bg-yellow-400,
+.bg-yellow-500,
+.bg-yellow-600,
+button[onclick*="hint"],
+button[onclick*="improve"] {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Remove focus outline */
+button:focus,
+button:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Prevent hover color change on specific elements */
+button[class*="bg-yellow"]:hover,
+.bg-yellow-400:hover,
+.bg-yellow-500:hover,
+.bg-yellow-600:hover {
+    background-color: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    border: none !important;
+}
+
+/* Fix Admin User dropdown - no hover change */
+button[class*="flex"][class*="items-center"]:hover {
+    background-color: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+}
+
+/* Remove transition effects that cause color changes */
+.no-hover-change,
+.no-hover-change:hover {
+    background-color: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    transition: none !important;
+}
+
+/* Fix AI Hint and Improve Code buttons - no border, no hover change */
+button[id*="hint"]:hover,
+button[id*="improve"]:hover,
+button[onclick*="hint"]:hover,
+button[onclick*="improve"]:hover {
+    background-color: var(--primary-yellow) !important;
+    color: #0A0A0A !important;
+    border: none !important;
+    transform: none !important;
+}
+
+
+/* ========================================
+   FORCE REMOVE ALL BORDERS FROM BUTTONS
+   ======================================== */
+
+/* Remove ALL borders from buttons */
+button, .btn, [type="button"], [type="submit"],
+a.btn-primary, a[class*="bg-"], 
+button[class*="bg-"], 
+[class*="bg-yellow"],
+[class*="bg-blue"],
+[class*="bg-green"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove borders on focus and hover */
+button:focus, button:hover,
+.btn:focus, .btn:hover,
+[type="button"]:focus, [type="button"]:hover,
+[type="submit"]:focus, [type="submit"]:hover {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Specific fixes for visible buttons */
+button[onclick*="hint"],
+button[onclick*="improve"],
+button[class*="flex"],
+.bg-yellow-400, .bg-yellow-500, .bg-yellow-600 {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Remove border from Admin User dropdown */
+button[class*="flex"][class*="items-center"] {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Remove border from certificate info box */
+.bg-yellow-400, .bg-yellow-500, .bg-yellow-600,
+[class*="rounded-lg"][class*="bg-yellow"] {
+    border: none !important;
+}
