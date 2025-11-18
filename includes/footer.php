@@ -51,3 +51,9 @@
     <script src="/assets/js/main.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>
+<?php
+// Flush output buffer at the end
+if (ob_get_level()) {
+    ob_end_flush();
+}
+?>

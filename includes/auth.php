@@ -110,8 +110,10 @@ function login($email, $password) {
     $_SESSION['logged_in'] = true;
     $_SESSION['last_activity'] = time();
     
-    // Regenerate session ID for security
-    session_regenerate_id(true);
+    // Regenerate session ID for security (only if headers not sent)
+    if (!headers_sent()) {
+        session_regenerate_id(true);
+    }
     
     // Remove password hash from user data
     unset($user['password_hash']);
@@ -165,6 +167,10 @@ function isLoggedIn() {
  */
 function requireLogin($redirectTo = '/pages/login') {
     if (!isLoggedIn()) {
+        // Flush output buffer before redirect
+        if (ob_get_level()) {
+            ob_end_clean();
+        }
         header('Location: ' . $redirectTo);
         exit;
     }
@@ -184,6 +190,10 @@ function isAdmin() {
  */
 function requireAdmin($redirectTo = '/pages/dashboard') {
     if (!isAdmin()) {
+        // Flush output buffer before redirect
+        if (ob_get_level()) {
+            ob_end_clean();
+        }
         header('Location: ' . $redirectTo);
         exit;
     }

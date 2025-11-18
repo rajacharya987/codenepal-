@@ -5,9 +5,8 @@
  */
 
 // Start output buffering to prevent header issues
-if (!ob_get_level()) {
-    ob_start();
-}
+// This must be the first thing in the file
+ob_start();
 
 // Database Configuration
 define('DB_HOST', 'localhost');

@@ -93,6 +93,10 @@ function getFlashMessage() {
  * @param string $url
  */
 function redirect($url) {
+    // Flush output buffer before redirect
+    if (ob_get_level()) {
+        ob_end_clean();
+    }
     header('Location: ' . $url);
     exit;
 }

@@ -4,6 +4,11 @@
  * Included on all pages
  */
 
+// Start output buffering to prevent header issues
+if (!ob_get_level()) {
+    ob_start();
+}
+
 // Ensure config is loaded first (it starts the session)
 if (!defined('DB_HOST')) {
     require_once __DIR__ . '/../config/config.php';
